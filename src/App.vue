@@ -12,14 +12,18 @@ type Palette = {
 }
 
 const palettes: Palette[] = [
-  { name: '櫻桃粉 × 奶油', mood: '甜而不膩的午後', label: 'CHERRY', colors: ['#a52b55', '#f5a7b8', '#fff0df'], title: 'soft\nfocus', subtitle: 'A little sweetness for every day', number: '01' },
-  { name: '玫瑰粉 × 森林綠', mood: '浪漫裡帶一點勇氣', label: 'ROSE', colors: ['#b83f62', '#c8d7b8', '#ffe7df'], title: 'wild\nheart', subtitle: 'Small rituals, big feelings', number: '02' },
-  { name: '蜜桃粉 × 可可', mood: '溫暖又有趣的平衡', label: 'PEACH', colors: ['#ee8f79', '#70414c', '#fff0cf'], title: 'good\ncompany', subtitle: 'A guide to lovely afternoons', number: '03' },
-  { name: '莓果紅 × 粉紫', mood: '大膽的夜色宣言', label: 'BERRY', colors: ['#8e2450', '#c99bd2', '#ffe0bd'], title: 'after\nhours', subtitle: 'Stories for the softer hours', number: '04' },
-  { name: '珊瑚粉 × 天藍', mood: '海風裡的輕快心情', label: 'CORAL', colors: ['#ed756d', '#9bd5e2', '#fff1d2'], title: 'sunny\nside', subtitle: 'Notes from a bright place', number: '05' },
-  { name: '藕粉 × 墨黑', mood: '安靜而有份量', label: 'BLUSH', colors: ['#c98291', '#27252b', '#f8e7dc'], title: 'form &\nfeeling', subtitle: 'The quiet power of good design', number: '06' },
-  { name: '螢光粉 × 檸檬黃', mood: '明亮的叛逆感', label: 'NEON', colors: ['#e84e93', '#f2d64e', '#fff6dd'], title: 'make\nnoise', subtitle: 'The playful issue', number: '07' },
-  { name: '裸粉 × 橄欖綠', mood: '復古又俏皮', label: 'VINTAGE', colors: ['#c97f91', '#78824a', '#fff0cf'], title: 'good\ntaste', subtitle: 'An edible kind of optimism', number: '08' },
+  { name: '櫻花粉 × 奶油', mood: '輕柔明亮的春日午後', label: 'SAKURA', colors: ['#f7cfd8', '#f5a7b8', '#fff8f0'], title: 'soft\nfocus', subtitle: 'A little sweetness for every day', number: '01' },
+  { name: '棉花糖粉 × 蜜桃', mood: '甜而不膩的好心情', label: 'CANDY', colors: ['#f2b6c4', '#f2a48f', '#fff0df'], title: 'sweet\nthings', subtitle: 'Small joys, beautifully noticed', number: '02' },
+  { name: '玫瑰粉 × 粉紫', mood: '浪漫裡帶一點想像', label: 'ROSE', colors: ['#ee9eae', '#c99bd2', '#ffe7df'], title: 'wild\nheart', subtitle: 'Small rituals, big feelings', number: '03' },
+  { name: '藕粉 × 可可', mood: '安靜溫暖的平衡', label: 'BLUSH', colors: ['#e58a9f', '#70414c', '#f8e7dc'], title: 'form &\nfeeling', subtitle: 'The quiet power of good design', number: '04' },
+  { name: '蜜桃粉 × 奶油', mood: '溫暖又有趣的午後', label: 'PEACH', colors: ['#d98298', '#eea68f', '#fff0cf'], title: 'good\ncompany', subtitle: 'A guide to lovely afternoons', number: '05' },
+  { name: '裸粉 × 鼠尾草', mood: '復古而柔和的日常', label: 'VINTAGE', colors: ['#c98291', '#a9b39a', '#fff0cf'], title: 'good\ntaste', subtitle: 'An edible kind of optimism', number: '06' },
+  { name: '珊瑚粉 × 天藍', mood: '海風裡的輕快心情', label: 'CORAL', colors: ['#c86f85', '#9bd5e2', '#fff1d2'], title: 'sunny\nside', subtitle: 'Notes from a bright place', number: '07' },
+  { name: '莓果粉 × 金色', mood: '成熟而有光澤的魅力', label: 'BERRY', colors: ['#bd5d78', '#e6bd67', '#ffe0bd'], title: 'after\nhours', subtitle: 'Stories for the softer hours', number: '08' },
+  { name: '螢光粉 × 檸檬黃', mood: '明亮的叛逆感', label: 'NEON', colors: ['#b84c7d', '#f2d64e', '#fff6dd'], title: 'make\nnoise', subtitle: 'The playful issue', number: '09' },
+  { name: '玫瑰紅 × 森林綠', mood: '浪漫裡帶一點勇氣', label: 'ROSEWOOD', colors: ['#b83f62', '#c8d7b8', '#ffe7df'], title: 'brave\nromance', subtitle: 'A little courage in full bloom', number: '10' },
+  { name: '櫻桃粉 × 墨黑', mood: '果敢而有份量的夜色', label: 'CHERRY', colors: ['#a52b55', '#27252b', '#fff0df'], title: 'bold\nnotes', subtitle: 'A darker kind of sweetness', number: '11' },
+  { name: '深莓紅 × 粉紫', mood: '大膽的夜色宣言', label: 'DEEP BERRY', colors: ['#8e2450', '#c99bd2', '#ffe0bd'], title: 'deep\nafterglow', subtitle: 'Stories for the softer hours', number: '12' },
 ]
 
 const selected = ref(0)
@@ -35,7 +39,7 @@ function choosePalette(index: number) {
     <header>
       <a class="wordmark" href="./" aria-label="Pinkroom home"><i></i>pinkroom</a>
       <p>一場色彩配對遊戲</p>
-      <span>08 / 08</span>
+      <span>12 / 12</span>
     </header>
 
     <section class="intro">
@@ -62,7 +66,7 @@ function choosePalette(index: number) {
       </div>
 
       <aside class="palette-panel">
-        <p class="panel-label">MATCH A MOOD · 深 → 淺</p>
+        <p class="panel-label">MATCH A MOOD · 淺 → 深</p>
         <div class="palette-list" role="radiogroup" aria-label="選擇色彩組合">
           <button v-for="(item, index) in palettes" :key="item.label" class="palette-choice" :class="{ active: selected === index }" type="button" role="radio" :aria-checked="selected === index" @click="choosePalette(index)">
             <span class="choice-number">{{ String(index + 1).padStart(2, '0') }}</span>
